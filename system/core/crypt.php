@@ -59,10 +59,10 @@ class core_crypt
 
         mcrypt_generic_deinit($mcrypt);
         mcrypt_module_close($mcrypt);
-
+        
         if ($_result = base64_decode($result))
         {
-            return gzuncompress($_result);
+        	return gzuncompress($_result);
         }
 
         return gzuncompress($result);

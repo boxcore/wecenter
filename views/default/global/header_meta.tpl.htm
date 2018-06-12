@@ -19,7 +19,6 @@
 <link href="<?php echo $import_css; ?>?v=<?php echo G_VERSION_BUILD; ?>" rel="stylesheet" type="text/css" />
 <?php } ?>
 <?php } ?>
-
 <?php if ($this->template_name != 'default') { ?>
 <link href="<?php echo G_STATIC_URL; ?>/css/<?php echo $this->template_name; ?>/<?php echo $this->template_name; ?>.css" rel="stylesheet" type="text/css" />
 <?php } ?>
@@ -40,6 +39,8 @@
 	var G_NOTIFICATION_INTERVAL = <?php echo intval(get_setting('unread_flush_interval')) * 1000; ?>;
 	var G_CAN_CREATE_TOPIC = "<?php echo $this->user_info['permission']['create_topic']; ?>";
 	var G_ADVANCED_EDITOR_ENABLE = "<?php echo get_setting('advanced_editor_enable'); ?>";
+	var FILE_TYPES = "<?php echo strtolower(get_setting('allowed_upload_types')); ?>";
+
 
 	<?php if (human_valid('question_valid_hour')) { ?>
 	var G_QUICK_PUBLISH_HUMAN_VALID = true;
